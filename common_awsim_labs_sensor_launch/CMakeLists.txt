@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(common_awsim_sensor_launch)
+project(common_awsim_labs_sensor_launch)
 
 find_package(ament_cmake_auto REQUIRED)
 ament_auto_find_build_dependencies()
