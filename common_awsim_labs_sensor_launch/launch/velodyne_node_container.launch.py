@@ -141,10 +141,10 @@ def launch_setup(context, *args, **kwargs):
     )
 
     # Ring Outlier Filter is the last component in the pipeline, so control the output frame here
-    if LaunchConfiguration("output_as_sensor_frame").perform(context).lower() == "true":
-        ring_outlier_output_frame = {"output_frame": LaunchConfiguration("frame_id")}
-    else:
-        ring_outlier_output_frame = {"output_frame": ""}  # keep the output frame as the input frame
+    # if LaunchConfiguration("output_as_sensor_frame").perform(context).lower() == "true":
+    #     ring_outlier_output_frame = {"output_frame": LaunchConfiguration("frame_id")}
+    # else:
+    #     ring_outlier_output_frame = {"output_frame": ""}  # keep the output frame as the input frame
     nodes.append(
         ComposableNode(
             package="autoware_pointcloud_preprocessor",
@@ -154,7 +154,7 @@ def launch_setup(context, *args, **kwargs):
                 ("input", "rectified/pointcloud_ex"),
                 ("output", "pointcloud_before_sync"),
             ],
-            parameters=[ring_outlier_filter_node_param, ring_outlier_output_frame],
+            parameters=[ring_outlier_filter_node_param],
             extra_arguments=[{"use_intra_process_comms": LaunchConfiguration("use_intra_process")}],
         )
     )
@@ -169,32 +169,6 @@ def launch_setup(context, *args, **kwargs):
         composable_node_descriptions=nodes,
         output="both",
     )
-
-    # distortion_relay_component = ComposableNode(
-    #     package="topic_tools",
-    #     plugin="topic_tools::RelayNode",
-    #     name="pointcloud_distortion_relay",
-    #     namespace="",
-    #     parameters=[
-    #         {"input_topic": "mirror_cropped/pointcloud_ex"},
-    #         {"output_topic": "rectified/pointcloud_ex"}
-    #     ],
-    #     extra_arguments=[{"use_intra_process_comms": LaunchConfiguration("use_intra_process")}],
-    # )
-
-    # one way to add a ComposableNode conditional on a launch argument to a
-    # container. The `ComposableNode` itself doesn't accept a condition
-    # distortion_loader = LoadComposableNodes(
-    #     composable_node_descriptions=[distortion_component],
-    #     target_container=container,
-    #     condition=launch.conditions.IfCondition(LaunchConfiguration("use_distortion_corrector")),
-    # )
-    # distortion_relay_loader = LoadComposableNodes(
-    #     composable_node_descriptions=[distortion_relay_component],
-    #     target_container=container,
-    #     condition=launch.conditions.UnlessCondition(LaunchConfiguration("use_distortion_corrector")),
-    # )
-    # return [container, distortion_loader, distortion_relay_loader]
 
     return [container]
 
