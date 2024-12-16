@@ -194,7 +194,7 @@ def generate_launch_description():
     )
     add_launch_arg("frame_id", "lidar", "frame id")
     add_launch_arg("use_multithread", "False", "use multithread")
-    add_launch_arg("use_intra_process", "False", "use ROS2 component container communication")
+    add_launch_arg("use_intra_process", "False", "use ROS 2 component container communication")
     add_launch_arg(
         "distortion_correction_node_param_path",
         os.path.join(
