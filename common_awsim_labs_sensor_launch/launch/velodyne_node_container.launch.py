@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import os
+
 from ament_index_python.packages import get_package_share_directory
 import launch
 from launch.actions import DeclareLaunchArgument
@@ -181,7 +182,7 @@ def generate_launch_description():
         launch_arguments.append(
             DeclareLaunchArgument(name, default_value=default_value, description=description)
         )
-        
+
     common_sensor_share_dir = get_package_share_directory("common_sensor_launch")
 
     add_launch_arg("base_frame", "base_link", "base frame id")
