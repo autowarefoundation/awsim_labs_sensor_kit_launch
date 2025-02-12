@@ -2,6 +2,17 @@
 Changelog for package common_awsim_labs_sensor_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.41.0 (2025-02-12)
+-------------------
+* Merge remote-tracking branch 'origin/main' into HEAD
+* chore: remove unnecessary dependency to velodyne_monitor (`#19 <https://github.com/autowarefoundation/awsim_labs_sensor_kit_launch/issues/19>`_)
+* chore: sync files (`#14 <https://github.com/autowarefoundation/awsim_labs_sensor_kit_launch/issues/14>`_)
+  Co-authored-by: github-actions <github-actions@github.com>
+  Co-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>
+  Co-authored-by: M. Fatih Cırıt <mfc@autoware.org>
+* refactor(glog_component): prefix package and namespace with autoware (`#10 <https://github.com/autowarefoundation/awsim_labs_sensor_kit_launch/issues/10>`_)
+* Contributors: Esteve Fernandez, Ryohsuke Mitsudome, awf-autoware-bot[bot]
+
 0.39.0 (2024-12-12)
 -------------------
 * feat(common_awsim_labs_sensor_launch): distortion corrector add new param (`#7 <https://github.com/autowarefoundation/awsim_labs_sensor_kit_launch/issues/7>`_)

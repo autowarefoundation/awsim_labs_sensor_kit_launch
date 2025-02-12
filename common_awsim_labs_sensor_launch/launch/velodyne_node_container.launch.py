@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import os
+
 from ament_index_python.packages import get_package_share_directory
 import launch
 from launch.actions import DeclareLaunchArgument
@@ -21,7 +22,6 @@ from launch.conditions import IfCondition
 from launch.conditions import UnlessCondition
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import ComposableNodeContainer
-from launch_ros.actions import LoadComposableNodes
 from launch_ros.descriptions import ComposableNode
 from launch_ros.parameter_descriptions import ParameterFile
 import yaml
@@ -73,7 +73,7 @@ def launch_setup(context, *args, **kwargs):
 
     nodes.append(
         ComposableNode(
-            package="glog_component",
+            package="autoware_glog_component",
             plugin="GlogComponent",
             name="glog_component",
         )
@@ -181,7 +181,7 @@ def generate_launch_description():
         launch_arguments.append(
             DeclareLaunchArgument(name, default_value=default_value, description=description)
         )
-        
+
     common_sensor_share_dir = get_package_share_directory("common_sensor_launch")
 
     add_launch_arg("base_frame", "base_link", "base frame id")
@@ -194,7 +194,7 @@ def generate_launch_description():
     )
     add_launch_arg("frame_id", "lidar", "frame id")
     add_launch_arg("use_multithread", "False", "use multithread")
-    add_launch_arg("use_intra_process", "False", "use ROS2 component container communication")
+    add_launch_arg("use_intra_process", "False", "use ROS 2 component container communication")
     add_launch_arg(
         "distortion_correction_node_param_path",
         os.path.join(
