@@ -2,6 +2,11 @@
 Changelog for package awsim_labs_sensor_kit_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.41.1 (2025-02-13)
+-------------------
+* feat(awsim_labs_sensor_kit_launch): awsim lab load concatenate node parameters (`#9 <https://github.com/autowarefoundation/awsim_labs_sensor_kit_launch/issues/9>`_)
+* Contributors: Yi-Hsiang Fang (Vivid)
+
 0.41.0 (2025-02-12)
 -------------------
 * Merge remote-tracking branch 'origin/main' into HEAD
