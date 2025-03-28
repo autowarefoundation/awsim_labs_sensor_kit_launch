@@ -2,6 +2,11 @@
 Changelog for package common_awsim_labs_sensor_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.42.0 (2025-03-28)
+-------------------
+* fix(common_awsim_labs_sensor_launch): update the glog plugin namespace (`#22 <https://github.com/autowarefoundation/awsim_labs_sensor_kit_launch/issues/22>`_)
+* Contributors: Mete Fatih Cırıt
+
 0.41.1 (2025-02-13)
 -------------------
 * fix(common_awsim_labs_sensor_launch): update the glog plugin namespace (`#22 <https://github.com/autowarefoundation/awsim_labs_sensor_kit_launch/issues/22>`_)

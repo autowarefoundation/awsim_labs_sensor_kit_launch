@@ -2,6 +2,13 @@
 Changelog for package awsim_labs_sensor_kit_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.42.0 (2025-03-28)
+-------------------
+* Merge branch 'main' into humble
+* refactor(awsim_labs_sensor_kit_launch): removed tamagawa_imu_driver (`#25 <https://github.com/autowarefoundation/awsim_labs_sensor_kit_launch/issues/25>`_)
+* feat(awsim_labs_sensor_kit_launch): awsim lab load concatenate node parameters (`#9 <https://github.com/autowarefoundation/awsim_labs_sensor_kit_launch/issues/9>`_)
+* Contributors: Esteve Fernandez, M. Fatih Cırıt, Yi-Hsiang Fang (Vivid)
+
 0.41.1 (2025-02-13)
 -------------------
 * feat(awsim_labs_sensor_kit_launch): awsim lab load concatenate node parameters (`#9 <https://github.com/autowarefoundation/awsim_labs_sensor_kit_launch/issues/9>`_)
